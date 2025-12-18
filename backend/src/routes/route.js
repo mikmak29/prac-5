@@ -4,8 +4,6 @@ import * as User from "../controllers/userNote.js";
 const route = express.Router();
 
 route.route("/").get(User.fetchAllData).post(User.createData);
-route.route("/:id").get(User.findUser);
-route.route("/:id").put(User.updateData);
-route.route("/:id").delete(User.deleteData);
+route.route("/:id").get(User.findUser).put(User.updateData).delete(User.deleteData);
 
 export default route;
